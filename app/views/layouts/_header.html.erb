@@ -1,22 +1,40 @@
-<%= image_tag 'https://s3.eu-central-1.amazonaws.com/akraapp/layout/library_scaled.jpg', alt: 'header image', style: 'max-width: 100%' %>
+<% if current_page?(root_path) %>
+    <nav class="navbar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <i class="fa fa-bars fa-2x"></i>
+          </button>
+          <a class="navbar-brand" href="#"><span><%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/dmar_scaled_trans.png', alt: 'logo', style: 'max-height: 40px' %></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">PAGE 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
+          </ul>
+        </div>
+    </nav>
 
-<nav class="navbar">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <i class="fa fa-bars fa-2x"></i>
-      </button>
-      <a class="navbar-brand" href="#"><span><%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/dmar_scaled.jpg', alt: 'logo', style: 'max-height: 40px' %></span></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">PAGE 1</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-</nav>
+<% else %>
+    <%= image_tag 'library_scaled.jpg', width: '100%', alt: 'panorama_header' %>
+
+    <nav class="navbar">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <a class="navbar-brand" href="#"><span><%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/dmar_scaled_trans.png', alt: 'logo', style: 'max-height: 40px' %></span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">PAGE 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
+        </ul>
+      </div>
+    </nav>
+<% end %>

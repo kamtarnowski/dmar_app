@@ -1,2 +1,42 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div id="home">
+    <%= video_tag("intro_movie.mp4", autoplay: true, loop: true, width: "100%" ) %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <br>
+    <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
+  <h3><span style="background-color: white; position: relative; top: -0.5em; padding: 20px">
+    SPECJALIZUJEMY SIĘ W:
+  </span></h3>
+    </div>
+  </div>
+
+  <div class="row" style="padding-top: 20px">
+    <div class="col-md-8 col-md-offset-2">
+      <h5 style="line-height: 26px; text-indent: 3em">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.
+        </h5>
+    </div>
+  </div>
+
+  <div class="row" style="padding-bottom: 45px">
+    <br>
+    <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
+      <h3><span style="background-color: white; position: relative; top: -0.5em; padding: 20px">
+        OSTATNIE REALIZACJE:
+        </span></h3>
+    </div>
+  </div>
+</div>
+
+<div id="owl-slide" class="owl-carousel owl-theme">
+  <div class='item row' style="margin: 0">
+    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "image1_scaled.jpg", alt: 'photo 1', class: 'img-responsive', style: 'margin: 0 auto' %></div>
+    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "image1_scaled.jpg", alt: 'photo 2', class: 'img-responsive', style: 'margin: 0 auto' %></div>
+  </div>
+  <div class='item row' style="margin: 0">
+    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "image2_scaled.jpg", alt: 'photo 1', class: 'img-responsive', style: 'margin: 0 auto' %></div>
+    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "image2_scaled.jpg", alt: 'photo 2', class: 'img-responsive', style: 'margin: 0 auto' %></div>
+  </div>
+</div>
