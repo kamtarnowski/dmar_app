@@ -30,6 +30,11 @@ gem 'gritter'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'owlcarousel-rails'
+gem 'omniauth-facebook'
+gem 'paperclip'
+gem 'aws-sdk', '~> 2'
+gem 'foreman'
+gem 'rails-i18n'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc, require: false
