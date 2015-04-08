@@ -60,15 +60,11 @@ GEM
     autoprefixer-rails (5.1.7)
       execjs
       json
-    aws-sdk (2.0.26)
-      aws-sdk-resources (= 2.0.26)
-    aws-sdk-core (2.0.26)
-      builder (~> 3.0)
-      jmespath (~> 1.0)
-      multi_json (~> 1.0)
-      multi_xml (~> 0.5)
-    aws-sdk-resources (2.0.26)
-      aws-sdk-core (= 2.0.26)
+    aws-sdk (1.63.0)
+      aws-sdk-v1 (= 1.63.0)
+    aws-sdk-v1 (1.63.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.9)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -112,6 +108,8 @@ GEM
     execjs (2.4.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    flexslider (2.2.0)
+      sass-rails (>= 3.1.0)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     foreman (0.77.0)
@@ -137,8 +135,6 @@ GEM
     jbuilder (2.2.12)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jmespath (1.0.2)
-      multi_json (~> 1.0)
     jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -276,13 +272,14 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   autoprefixer-rails
-  aws-sdk (~> 2)
+  aws-sdk (< 2.0)
   better_errors
   bootstrap-sass
   byebug
   cancan
   coffee-rails (~> 4.1.0)
   devise
+  flexslider
   font-awesome-rails
   foreman
   gritter

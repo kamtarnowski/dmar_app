@@ -32,9 +32,10 @@ gem 'font-awesome-rails'
 gem 'owlcarousel-rails'
 gem 'omniauth-facebook'
 gem 'paperclip'
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '< 2.0'
 gem 'foreman'
 gem 'rails-i18n'
+gem 'flexslider'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc, require: false

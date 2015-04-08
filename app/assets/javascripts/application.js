@@ -16,6 +16,7 @@
 //= require jquery
 //= require gritter
 //= require owl.carousel
+//= require jquery.flexslider
 //= require bootstrap-sprockets
 //= require_tree .
 

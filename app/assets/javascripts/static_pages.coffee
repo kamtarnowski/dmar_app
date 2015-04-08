@@ -20,3 +20,18 @@ $ ->
       $('.owl-buttons div').show()
     .mouseleave ->
       $('.owl-buttons div').hide()
+
+  $('.flexslider').flexslider({
+    animation: "slide",
+    reverse: true,
+
+    controlNav: false,
+
+    prevText: false,
+    nextText: false,
+    keyboard: false,
+
+#    pausePlay: true,
+    directionNav: false,
+    smoothHeight: true,
+  });

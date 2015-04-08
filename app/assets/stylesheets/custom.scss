@@ -4,6 +4,12 @@
   -webkit-border-radius: $value;
 }
 
+@mixin bs($value) {
+  box-shadow: $value;
+  -moz-box-shadow: $value;
+  -webkit-box-shadow: $value;
+}
+
 .navbar-nav {
   li {
     a {
@@ -45,6 +51,7 @@
   display: block;
   width: 100%;
   height: auto;
+  padding-bottom: 5px
 }
 
 .owl-theme .owl-controls .owl-buttons div {
@@ -62,4 +69,26 @@
   right: 45px;
   top: 50%;
   z-index: 666;
+}
+
+.img1 {
+  @include bs(5px 5px 5px gray);
+  margin: 0 auto
+}
+
+.img2 {
+  @include bs(5px 5px 5px gray);
+  margin: 0 auto
+}
+
+.flexslider .slides img {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid grey;
 }
