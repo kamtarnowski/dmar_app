@@ -86,7 +86,7 @@
 </div>
 
 <!--if @opinions.present?-->
-<div class="flexslider">
+<div class="flexslider" style="margin: 0">
 
   <!--opinion2 = []-->
   <!--@opinions.each do-->
@@ -114,12 +114,16 @@
                   <div class="col-md-4 col-md-pull-4" style="text-align: center;">
                     <div class="hidden-md hidden-lg" style="padding-left: 90px; padding-right: 90px">
                     <h3><%= user1.name %></h3>
+                      <blockquote class="blockquote-reverse">
                     <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. </h5>
+                      </blockquote>
                     </div>
 
                     <div class="hidden-sm hidden-xs">
                       <h3><%= user1.name %></h3>
+                      <blockquote class="blockquote-reverse">
                       <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. </h5>
+                      </blockquote>
                     </div>
                   </div>
             </div>
@@ -133,13 +137,17 @@
                     <%= image_tag user2.avatar.url(:medium), class: 'img-circle' %>
                   </div>
                   <div class="col-md-4 col-xs-12" style="text-align: center">
-                  <div class="hidden-md hidden-lg" style="padding-left: 90px; padding-right: 90px">
+                  <div class="hidden-md hidden-lg" style="padding-left: 90px; padding-right: 90px;">
                       <h3><%= user2.name + 'XXX' %></h3>
+                    <blockquote style="text-align: left">
                       <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. </h5>
+                    </blockquote>
                   </div>
                   <div class="hidden-sm hidden-xs">
                     <h3><%= user2.name + 'XXX' %></h3>
+                    <blockquote style="text-align: left">
                     <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. </h5>
+                    </blockquote>
                   </div>
                 </div>
               </li>
@@ -147,4 +155,18 @@
           <% end %>
       <% end %>
     </ul>
+</div>
+
+<div class="container-fluid" id="map">
+    <div class="row" style="text-align: center; padding: 20px">
+      <h3 style="font-weight: 500">Chcesz wiedzieć więcej? Napisz do nas!</h3>
+    </div>
+    <div class="row" style="text-align: center">
+      <div class="col-md-4 col-md-offset-1">
+        KAMIL
+      </div>
+      <div class="col-md-4 col-md-offset-2">
+        Tarnowski
+      </div>
+    </div>
 </div>

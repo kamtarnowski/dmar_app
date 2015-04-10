@@ -54,3 +54,103 @@ after: function(){},            //Callback: function(slider) - Fires after each 
 end: function(){},              //Callback: function(slider) - Fires when the slider reaches the last slide (asynchronous)
 added: function(){},            //{NEW} Callback: function(slider) - Fires after a slide is added
 removed: function(){}           //{NEW} Callback: function(slider) - Fires after a slide is removed
+
+@mixin br($value) {
+  border-radius: $value;
+  -moz-border-radius: $value;
+  -webkit-border-radius: $value;
+}
+
+@mixin bs($value) {
+  box-shadow: $value;
+  -moz-box-shadow: $value;
+  -webkit-box-shadow: $value;
+}
+
+.navbar-nav {
+  li {
+    a {
+      padding-top: 25px !important;
+      padding-bottom: 25px !important;
+      padding-left: 25px !important;
+      padding-right: 25px !important;
+      text-decoration: none;
+      font-size: 16px;
+      color: black;
+      -moz-transition: background-color 1s;
+      -webkit-transition: background-color 1s;
+      transition: background-color 1s;
+
+      &:hover {
+      background-color: yellowgreen !important;
+      }
+      &:focus {
+      }
+      .active {
+        &:focus {
+        }
+        &:hover {
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  border-width: 0 !important;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height:40px !important;
+  margin: 0 !important;
+}
+
+#owl-slide .item {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5px
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+  display: none;
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  left: 45px;
+  top: 50%;
+  z-index: 666;
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  right: 45px;
+  top: 50%;
+  z-index: 666;
+}
+
+.img1 {
+  @include bs(5px 5px 5px gray);
+  margin: 0 auto
+}
+
+.img2 {
+  @include bs(5px 5px 5px gray);
+  margin: 0 auto
+}
+
+.flexslider .slides img {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid grey;
+}
+
+#map {
+  background-image: url('map_background.jpg');
+  min-height: 500px;
+}
