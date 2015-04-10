@@ -33,5 +33,5 @@ $ ->
 
 #    pausePlay: true,
     directionNav: false,
-    smoothHeight: true,
+    smoothHeight: false,
   });

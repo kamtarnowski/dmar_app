@@ -10,13 +10,10 @@
   -webkit-box-shadow: $value;
 }
 
-.navbar-nav {
+#myNavbar > ul.nav.navbar-nav.navbar-right.hidden-lg.hidden-md {
   li {
     a {
-      padding-top: 25px !important;
-      padding-bottom: 25px !important;
-      padding-left: 25px !important;
-      padding-right: 25px !important;
+      padding: 10px !important;
       text-decoration: none;
       font-size: 16px;
       color: black;
@@ -25,7 +22,33 @@
       transition: background-color 1s;
 
       &:hover {
-      background-color: yellowgreen !important;
+        background-color: yellowgreen !important;
+      }
+      &:focus {
+      }
+      .active {
+        &:focus {
+        }
+        &:hover {
+        }
+      }
+    }
+  }
+}
+
+#myNavbar > ul.nav.navbar-nav.navbar-right.hidden-sm.hidden-xs {
+  li {
+    a {
+      padding: 25px !important;
+      text-decoration: none;
+      font-size: 16px;
+      color: black;
+      -moz-transition: background-color 1s;
+      -webkit-transition: background-color 1s;
+      transition: background-color 1s;
+
+      &:hover {
+        background-color: yellowgreen !important;
       }
       &:focus {
       }
@@ -96,4 +119,5 @@
 #map {
   background-image: url('map_background.jpg');
   min-height: 500px;
+  background-size: 100% 100%
 }
