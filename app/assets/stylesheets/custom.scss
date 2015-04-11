@@ -119,5 +119,12 @@
 #map {
   background-image: url('map_background.jpg');
   min-height: 500px;
-  background-size: 100% 100%
+}
+
+footer {
+  background-color: darkgrey;
+  @include bs(0 -5px 10px #d6cbc7);
+  ul {
+    list-style-type:none;
+  }
 }
