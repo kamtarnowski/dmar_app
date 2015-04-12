@@ -10,7 +10,14 @@
   -webkit-box-shadow: $value;
 }
 
-#myNavbar > ul.nav.navbar-nav.navbar-right.hidden-lg.hidden-md {
+@mixin ts($value) {
+  -webkit-transition: all $value;
+  -moz-transition: all $value;
+  -o-transition: all $value;
+  transition: all $value;
+}
+
+#myNavbar > ul.nav.navbar-nav.navbar-right.hidden-lg.hidden-md.hidden-sm {
   li {
     a {
       padding: 10px !important;
@@ -36,7 +43,7 @@
   }
 }
 
-#myNavbar > ul.nav.navbar-nav.navbar-right.hidden-sm.hidden-xs {
+#myNavbar > ul.nav.navbar-nav.navbar-right.hidden-xs {
   li {
     a {
       padding: 25px !important;
@@ -68,6 +75,7 @@
   padding-right: 30px;
   min-height:40px !important;
   margin: 0 !important;
+  z-index: 999
 }
 
 #owl-slide .item {
@@ -135,5 +143,63 @@ footer {
   @include bs(0 -5px 10px #d6cbc7);
   ul {
     list-style-type:none;
+  }
+}
+
+#title1 {
+  @include ts(5s);
+}
+#title2 {
+  @include ts(5s);
+}
+#title3 {
+  @include ts(5s);
+}
+
+@media (max-width: 500px) {
+  #title1 {
+    width: 40%;
+  }
+  #title2 {
+    width: 40%;
+  }
+  #title3 {
+    font-size: 80%
+  }
+}
+
+@media (min-width: 501px) and (max-width: 700px) {
+  #title1 {
+    width: 50%;
+  }
+  #title2 {
+    width: 50%;
+  }
+  #title3 {
+    font-size: 100%
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  #title1 {
+    width: 70%;
+  }
+  #title2 {
+    width: 70%;
+  }
+  #title3 {
+    font-size: 120%
+  }
+}
+
+@media (min-width: 1001px) {
+  #title1 {
+    width: 100%;
+  }
+  #title2 {
+    width: 100%;
+  }
+  #title3 {
+    font-size: 200%
   }
 }
