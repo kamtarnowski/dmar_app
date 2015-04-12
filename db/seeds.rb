@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Opinion.delete_all
 User.delete_all
 
 array = ['14239003.jpg',
@@ -23,6 +24,10 @@ array = ['14239003.jpg',
 
 n = 1
 10.times do
-  User.create(email: "email#{n}@gmail.com", name: "name#{n}", password: 'password', password_confirmation: 'password', avatar: File.open("#{Rails.root}/public/users/#{array.sample}"))
+  User.create(email: "email#{n}@gmail.com", name: Faker::Name.name, password: 'password', password_confirmation: 'password', avatar: File.open("#{Rails.root}/public/users/#{array.sample}"))
   n += 1
+end
+
+User.all.each do |user|
+  user.create_opinion(content: Faker::Lorem.sentence(10), status: true)
 end

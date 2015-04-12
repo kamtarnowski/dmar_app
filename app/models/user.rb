@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
 
+  has_one :opinion
   has_attached_file :avatar, styles: {
       thumb: '100x100>',
       medium: '300x300>'

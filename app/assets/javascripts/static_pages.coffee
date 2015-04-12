@@ -21,7 +21,7 @@ $ ->
     .mouseleave ->
       $('.owl-buttons div').hide()
 
-  $('.flexslider').flexslider({
+  $('.flexslider').flexslider
     animation: "slide",
     reverse: true,
 
@@ -31,7 +31,6 @@ $ ->
     nextText: false,
     keyboard: false,
 
-    pausePlay: true,
-    directionNav: true,
+#    pausePlay: true,
+    directionNav: false,
     smoothHeight: false,
-  });
