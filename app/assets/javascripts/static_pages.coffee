@@ -31,7 +31,7 @@ $ ->
     nextText: false,
     keyboard: false,
 
-#    pausePlay: true,
-    directionNav: false,
+    pausePlay: true,
+    directionNav: true,
     smoothHeight: false,
   });

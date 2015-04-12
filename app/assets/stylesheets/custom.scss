@@ -121,6 +121,15 @@
   min-height: 500px;
 }
 
+#new_contact {
+  input {
+    border: 2px solid black;
+  }
+  textarea {
+    border: 2px solid black;
+  }
+}
+
 footer {
   background-color: darkgrey;
   @include bs(0 -5px 10px #d6cbc7);
