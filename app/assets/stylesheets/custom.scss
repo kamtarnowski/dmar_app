@@ -60,12 +60,21 @@
       &:focus {
       }
       .active {
+        background-color: #d6cf29;
         &:focus {
         }
         &:hover {
         }
       }
     }
+  }
+}
+
+.active {
+  background-color: #d6cf29;
+  &:focus {
+  }
+  &:hover {
   }
 }
 
@@ -122,11 +131,6 @@
   right: 0;
   bottom: 0;
   border: 2px solid grey;
-}
-
-#map {
-  background-image: url('map_background.jpg');
-  min-height: 500px;
 }
 
 #new_contact {

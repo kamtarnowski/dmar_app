@@ -1,7 +1,7 @@
 <% provide :header, "background-color: rgba(255, 255, 255, 0.5); position: fixed !important; width: 100%; z-index: 999;" %>
 
 <div id="home" style="position: relative">
-  <%= video_tag("intro_movie.mp4", autoplay: true, loop: true, width: "100%" ) %>
+  <%= video_tag("https://s3.eu-central-1.amazonaws.com/dmarapp/layout/intro_movie.mp4", autoplay: true, loop: true, width: "100%" ) %>
   <div class="container">
       <div style="z-index: 666; position: absolute; top: 50%">
         <%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/dmar_big_logo.png', id: "title1" %>
@@ -15,7 +15,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" id="oferta">
   <div class="row">
     <br>
     <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
@@ -32,7 +32,9 @@
         </h5>
     </div>
   </div>
+</div>
 
+<div class="container" id="realizacje">
   <div class="row" style="padding-bottom: 45px">
     <br>
     <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
@@ -46,12 +48,12 @@
 <!--if @pictures.where(created_at -> ?, 30.days).present?-->
 <div id="owl-slide" class="owl-carousel owl-theme">
   <div class='item row' style="margin: 0">
-    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "image1_scaled.jpg", alt: 'photo 1', class: 'img-responsive img1' %></div>
-    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "image1_scaled.jpg", alt: 'photo 2', class: 'img-responsive img2' %></div>
+    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 1', class: 'img-responsive img1' %></div>
+    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 2', class: 'img-responsive img2' %></div>
   </div>
   <div class='item row' style="margin: 0">
-    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "image1_scaled.jpg", alt: 'photo 1', class: 'img-responsive img1' %></div>
-          <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "image1_scaled.jpg", alt: 'photo 2', class: 'img-responsive img2' %></div>
+    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 1', class: 'img-responsive img1' %></div>
+          <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 2', class: 'img-responsive img2' %></div>
           <!--opinion2 = []-->
           <!--@opinions.each do-->
           <!--opinion1 = Opinion.sample-->
@@ -85,15 +87,17 @@
         </h5>
       </div>
     </div>
+</div>
 
-    <div class="row" style="padding-bottom: 45px">
-      <br>
-      <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
-        <h3><span style="background-color: white; position: relative; top: -0.5em; padding: 20px">
+<div class="container" id="opinie">
+  <div class="row" style="padding-bottom: 45px">
+    <br>
+    <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
+      <h3><span style="background-color: white; position: relative; top: -0.5em; padding: 20px">
     OPINIE O NAS
     </span></h3>
-      </div>
     </div>
+  </div>
 </div>
 
 <% if @opinions.present? %>
@@ -116,14 +120,14 @@
                         <div class="hidden-md hidden-lg" style="padding-left: 90px; padding-right: 90px">
                         <h3><%= opinion1.user.name %></h3>
                           <blockquote class="blockquote-reverse">
-                        <h5> <%= opinion1.content %> </h5>
+                        <h5> <i class="fa fa-quote-left"></i> &nbsp;<%= opinion1.content %>&nbsp;<i class="fa fa-quote-right"></i> </h5>
                           </blockquote>
                         </div>
 
                         <div class="hidden-sm hidden-xs">
                           <h3><%= opinion1.user.name %></h3>
                           <blockquote class="blockquote-reverse">
-                            <h5> <%= opinion1.content %> </h5>
+                            <h5> <i class="fa fa-quote-left"></i> &nbsp; <%= opinion1.content %> &nbsp;<i class="fa fa-quote-right"></i>  </h5>
                           </blockquote>
                         </div>
                       </div>
@@ -145,13 +149,13 @@
                       <div class="hidden-md hidden-lg" style="padding-left: 90px; padding-right: 90px;">
                           <h3><%= opinion2.user.name%></h3>
                         <blockquote style="text-align: left">
-                          <h5> <%= opinion2.content %> </h5>
+                          <h5> <i class="fa fa-quote-left"></i> &nbsp;<%= opinion2.content %> &nbsp; <i class="fa fa-quote-right"></i> </h5>
                         </blockquote>
                       </div>
                       <div class="hidden-sm hidden-xs">
                         <h3><%= opinion2.user.name%></h3>
                         <blockquote style="text-align: left">
-                          <h5> <%= opinion2.content %> </h5>
+                          <h5> <i class="fa fa-quote-left"></i> &nbsp; <%= opinion2.content %>&nbsp; <i class="fa fa-quote-right"></i> </h5>
                         </blockquote>
                       </div>
                     </div>
@@ -163,7 +167,7 @@
     </div>
 <% end %>
 
-<div class="container-fluid" id="map">
+<div class="container-fluid" id="kontakt" style="background-image: url('https://s3.eu-central-1.amazonaws.com/dmarapp/layout/map_background.jpg'); min-height: 500px;">
     <div class="row" style="text-align: center; padding: 20px">
       <h3 style="font-weight: 500">Chcesz wiedzieć więcej? Napisz do nas!</h3>
     </div>

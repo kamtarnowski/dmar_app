@@ -4,50 +4,58 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <i class="fa fa-bars fa-2x"></i>
           </button>
-          <a class="navbar-brand" href="#"><span><%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/dmar_scaled_trans.png', alt: 'logo', style: 'max-height: 40px' %></span></a>
+          <a class="navbar-brand" href="<%= root_path %>"><span><%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/dmar_scaled_trans.png', alt: 'logo', style: 'max-height: 40px' %></span></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right hidden-md hidden-lg hidden-sm">
-            <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="#">PAGE 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-            <li><a href="#"><i class="fa fa-user"></i> UŻYTKOWNIK</a></li>
+            <li><a href="<%= root_path %>">Start</a></li>
+            <li><a href="<%= root_path + '#oferta' %>">Oferta</a></li>
+            <li><a href="<%= root_path + '#realizacje' %>">Realizacje</a></li>
+            <li><a href="<%= root_path + '#opinie' %>">Opinie o nas</a></li>
+            <li><a href="<%= root_path + '#kontakt' %>">Kontakt</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Użytkownik</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right hidden-xs">
-            <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="#">PAGE 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-            <li><a href="#"><i class="fa fa-user"></i> UŻYTKOWNIK</a></li>
+            <li><a class="home" href="<%= root_path %>">Start</a></li>
+            <li><a class="oferta" href="<%= root_path + '#oferta' %>">Oferta</a></li>
+            <li><a href="<%= root_path + '#realizacje' %>">Realizacje</a></li>
+            <li><a href="<%= root_path + '#opinie' %>">Opinie o nas</a></li>
+            <li><a href="<%= root_path + '#kontakt' %>">Kontakt</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Użytkownik</a></li>
           </ul>
         </div>
     </nav>
 
 <% else %>
-    <%= image_tag 'library_scaled.jpg', width: '100%', alt: 'panorama_header' %>
+    <%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/library_scaled.jpg', width: '100%', alt: 'panorama_header' %>
 
     <nav class="navbar">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <i class="fa fa-bars fa-2x"></i>
         </button>
-        <a class="navbar-brand" href="#"><span><%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/dmar_scaled_trans.png', alt: 'logo', style: 'max-height: 40px' %></span></a>
+        <a class="navbar-brand" href="<%= root_path %>"><span><%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/dmar_scaled_trans.png', alt: 'logo', style: 'max-height: 40px' %></span></a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right hidden-md hidden-lg">
-          <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-          <li><a href="#">PAGE 1</a></li>
-          <li><a href="#">Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
-          <li><a href="#"><i class="fa fa-user"></i> UŻYTKOWNIK</a></li>
+          <li><a href="<%= root_path %>">Start</a></li>
+          <li><a href="<%= root_path + '#oferta' %>">Oferta</a></li>
+          <li><a href="<%= root_path + '#realizacje' %>">Realizacje</a></li>
+          <li><a href="<%= root_path + '#opinie' %>">Opinie o nas</a></li>
+          <li><a href="<%= root_path + '#kontakt' %>">Kontakt</a></li>
+          <li><a href="#">Galeria</a></li>
+          <li><a href="#">Użytkownik</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
-          <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-          <li><a href="#">PAGE 1</a></li>
-          <li><a href="#">Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
-          <li><a href="#"><i class="fa fa-user"></i> UŻYTKOWNIK</a></li>
+          <li><a href="<%= root_path %>">Start</a></li>
+          <li><a href="<%= root_path + '#oferta' %>">Oferta</a></li>
+          <li><a href="<%= root_path + '#realizacje' %>">Realizacje</a></li>
+          <li><a href="<%= root_path + '#opinie' %>">Opinie o nas</a></li>
+          <li><a href="<%= root_path + '#kontakt' %>">Kontakt</a></li>
+          <li><a href="#">Galeria</a></li>
+          <li><a href="#">Użytkownik</a></li>
         </ul>
       </div>
     </nav>
