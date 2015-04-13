@@ -3,45 +3,68 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  $(".owl-carousel").owlCarousel
-    navigation : true,
-    slideSpeed : 300,
-    paginationSpeed : 400,
-    singleItem:true
-    autoPlay : 5000
-    pagination: false
-    navigationText: [
-      "<i class='fa fa-chevron-circle-left'></i>",
-      "<i class='fa fa-chevron-circle-right'></i>"
-    ]
+    $(".owl-carousel").owlCarousel
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+      autoPlay : 5000
+      pagination: false
+      navigationText: [
+        "<i class='fa fa-chevron-circle-left'></i>",
+        "<i class='fa fa-chevron-circle-right'></i>"
+      ]
 
-  $('#owl-slide')
-    .mouseenter ->
-      $('.owl-buttons div').show()
-    .mouseleave ->
-      $('.owl-buttons div').hide()
+    $('#owl-slide')
+      .mouseenter ->
+        $('.owl-buttons div').show()
+      .mouseleave ->
+        $('.owl-buttons div').hide()
 
-  $('.flexslider').flexslider
-    animation: "slide",
-    reverse: true,
+    $('.flexslider').flexslider
+      animation: "slide",
+      reverse: true,
+      controlNav: false,
+      prevText: false,
+      nextText: false,
+      keyboard: false,
 
-    controlNav: false,
+    #    pausePlay: true,
+      directionNav: false,
+      smoothHeight: false,
 
-    prevText: false,
-    nextText: false,
-    keyboard: false,
+$(window).scroll ->
+      y_pos = window.pageYOffset;
+      <% array = ['oferta', 'realizacje', 'opinie', 'kontakt'] %>
+      <% array.each do |section| %>
 
-#    pausePlay: true,
-    directionNav: false,
-    smoothHeight: false,
+      sc_<%= section %> = $('#<%= section %>').offset().top
+      sc_hg_<%= section %> = $('#<%= section %>').height()
+      <% end %>
 
-#$(window).scroll ->
-#    y_sc_pos = window.pageYOffset;
-#    sc_home = $('#home').scrollTop()
-#    sc_oferta = $('#oferta').scrollTop()
-#
-#    if y_sc_pos > sc_home
-#        $('.home').addClass('active')
-#    else if y_sc_pos > sc_oferta
-#        $('.oferta').addClass('active')
+      sc_home = 0
+      sc_hg_home = $('#home').height()
 
+      if y_pos >= sc_home && y_pos < sc_hg_home + sc_home
+          $('.home').addClass('active2')
+
+          <% array.each do |section| %>
+          $('.<%= section %>').removeClass('active2')
+          <% end %>
+
+      <% array.each do |section| %>
+      else if y_pos > sc_<%= section %> && y_pos < sc_<%= section %> + sc_hg_<%= section %>
+          $('.home').removeClass('active2')
+          $('.<%= section %>').addClass('active2')
+
+          <% array.each do |sc| %>
+              <% next if sc == section %>
+          $(".<%= sc %>").removeClass('active2')
+          <% end %>
+      <% end %>
+
+      else
+          $('.home').removeClass('active2')
+          <% array.each do |section| %>
+          $('.<%= section %>').removeClass('active2')
+          <% end %>

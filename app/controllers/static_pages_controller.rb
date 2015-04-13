@@ -2,6 +2,6 @@ class StaticPagesController < ApplicationController
   def home
     @users = User.all
     @contact = Contact.new
-    @opinions = Opinion.all
+    @opinions = Opinion.where(status: true)
   end
 end

@@ -8,22 +8,48 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right hidden-md hidden-lg hidden-sm">
-            <li><a href="<%= root_path %>">Start</a></li>
-            <li><a href="<%= root_path + '#oferta' %>">Oferta</a></li>
-            <li><a href="<%= root_path + '#realizacje' %>">Realizacje</a></li>
-            <li><a href="<%= root_path + '#opinie' %>">Opinie o nas</a></li>
-            <li><a href="<%= root_path + '#kontakt' %>">Kontakt</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Użytkownik</a></li>
+            <li><a class="home" href="<%= root_path %>">START</a></li>
+            <li><a class="oferta" href="<%= root_path + '#oferta' %>">OFERTA</a></li>
+            <li><a class="realizacje" href="<%= root_path + '#realizacje' %>">REALIZACJE</a></li>
+            <li><a class="opinie" href="<%= root_path + '#opinie' %>">OPINIE O NAS</a></li>
+            <li><a class="kontakt" href="<%= root_path + '#kontakt' %>">KONTAKT</a></li>
+            <li><a class="gallery" href="#">GALERIA</a></li>
+
+            <li class="dropdown">
+              <a class="dropdown-toggle user" data-toggle="dropdown" href="">UŻYTKOWNIK</a>
+              <ul class="dropdown-menu">
+                <% if user_signed_in? %>
+                    <li> <%= link_to 'EDYCJA', edit_user_registration_path %> </li>
+                    <li> <%= link_to 'NAPISZ OPINIĘ', '#' %> </li>
+                    <li> <%= link_to 'WYLOGUJ SIĘ', destroy_user_session_path, method: :delete %> </li>
+                <% else %>
+                    <li> <%= link_to 'REJESTRACJA' ,new_user_registration_path  %> </li>
+                    <li> <%= link_to 'LOGOWANIE', new_user_session_path  %> </li>
+                <% end %>
+              </ul>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right hidden-xs">
-            <li><a class="home" href="<%= root_path %>">Start</a></li>
-            <li><a class="oferta" href="<%= root_path + '#oferta' %>">Oferta</a></li>
-            <li><a href="<%= root_path + '#realizacje' %>">Realizacje</a></li>
-            <li><a href="<%= root_path + '#opinie' %>">Opinie o nas</a></li>
-            <li><a href="<%= root_path + '#kontakt' %>">Kontakt</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Użytkownik</a></li>
+            <li><a class="home" href="<%= root_path %>">START</a></li>
+            <li><a class="oferta" href="<%= root_path + '#oferta' %>">OFERTA</a></li>
+            <li><a class="realizacje" href="<%= root_path + '#realizacje' %>">REALIZACJE</a></li>
+            <li><a class="opinie" href="<%= root_path + '#opinie' %>">OPINIE O NAS</a></li>
+            <li><a class="kontakt" href="<%= root_path + '#kontakt' %>">KONTAKT</a></li>
+            <li><a class="gallery" href="#">GALERIA</a></li>
+
+            <li class="dropdown">
+              <a class="dropdown-toggle user" data-toggle="dropdown" href="">UŻYTKOWNIK</a>
+              <ul class="dropdown-menu">
+                <% if user_signed_in? %>
+                    <li> <%= link_to 'EDYCJA', edit_user_registration_path %> </li>
+                    <li> <%= link_to 'NAPISZ OPINIĘ', '#' %> </li>
+                    <li> <%= link_to 'WYLOGUJ SIĘ', destroy_user_session_path, method: :delete %> </li>
+                <% else %>
+                    <li> <%= link_to 'REJESTRACJA' ,new_user_registration_path  %> </li>
+                    <li> <%= link_to 'LOGOWANIE', new_user_session_path  %> </li>
+                <% end %>
+              </ul>
+            </li>
           </ul>
         </div>
     </nav>
@@ -40,22 +66,48 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right hidden-md hidden-lg">
-          <li><a href="<%= root_path %>">Start</a></li>
-          <li><a href="<%= root_path + '#oferta' %>">Oferta</a></li>
-          <li><a href="<%= root_path + '#realizacje' %>">Realizacje</a></li>
-          <li><a href="<%= root_path + '#opinie' %>">Opinie o nas</a></li>
-          <li><a href="<%= root_path + '#kontakt' %>">Kontakt</a></li>
-          <li><a href="#">Galeria</a></li>
-          <li><a href="#">Użytkownik</a></li>
+          <li><a class="home" href="<%= root_path %>">START</a></li>
+          <li><a class="oferta" href="<%= root_path + '#oferta' %>">OFERTA</a></li>
+          <li><a class="realizacje" href="<%= root_path + '#realizacje' %>">REALIZACJE</a></li>
+          <li><a class="opinie" href="<%= root_path + '#opinie' %>">OPINIE O NAS</a></li>
+          <li><a class="kontakt" href="<%= root_path + '#kontakt' %>">KONTAKT</a></li>
+          <li><a class="gallery" href="#">GALERIA</a></li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle user" data-toggle="dropdown" href="">UŻYTKOWNIK</a>
+            <ul class="dropdown-menu">
+              <% if user_signed_in? %>
+                  <li> <%= link_to 'EDYCJA', edit_user_registration_path %> </li>
+                  <li> <%= link_to 'NAPISZ OPINIĘ', '#' %> </li>
+                  <li> <%= link_to 'WYLOGUJ SIĘ', destroy_user_session_path, method: :delete %> </li>
+              <% else %>
+                  <li> <%= link_to 'REJESTRACJA' ,new_user_registration_path  %> </li>
+                  <li> <%= link_to 'LOGOWANIE', new_user_session_path  %> </li>
+              <% end %>
+            </ul>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
-          <li><a href="<%= root_path %>">Start</a></li>
-          <li><a href="<%= root_path + '#oferta' %>">Oferta</a></li>
-          <li><a href="<%= root_path + '#realizacje' %>">Realizacje</a></li>
-          <li><a href="<%= root_path + '#opinie' %>">Opinie o nas</a></li>
-          <li><a href="<%= root_path + '#kontakt' %>">Kontakt</a></li>
-          <li><a href="#">Galeria</a></li>
-          <li><a href="#">Użytkownik</a></li>
+          <li><a class="home" href="<%= root_path %>">START</a></li>
+          <li><a class="oferta" href="<%= root_path + '#oferta' %>">OFERTA</a></li>
+          <li><a class="realizacje" href="<%= root_path + '#realizacje' %>">REALIZACJE</a></li>
+          <li><a class="opinie" href="<%= root_path + '#opinie' %>">OPINIE O NAS</a></li>
+          <li><a class="kontakt" href="<%= root_path + '#kontakt' %>">KONTAKT</a></li>
+          <li><a class="gallery" href="#">GALERIA</a></li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle user" data-toggle="dropdown" href="">UŻYTKOWNIK</a>
+            <ul class="dropdown-menu">
+              <% if user_signed_in? %>
+                  <li> <%= link_to 'EDYCJA', edit_user_registration_path %> </li>
+                  <li> <%= link_to 'NAPISZ OPINIĘ', '#' %> </li>
+                  <li> <%= link_to 'WYLOGUJ SIĘ', destroy_user_session_path, method: :delete %> </li>
+              <% else %>
+                  <li> <%= link_to 'REJESTRACJA' ,new_user_registration_path  %> </li>
+                  <li> <%= link_to 'LOGOWANIE', new_user_session_path  %> </li>
+              <% end %>
+            </ul>
+          </li>
         </ul>
       </div>
     </nav>

@@ -34,40 +34,42 @@
   </div>
 </div>
 
-<div class="container" id="realizacje">
-  <div class="row" style="padding-bottom: 45px">
-    <br>
-    <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
-      <h3><span style="background-color: white; position: relative; top: -0.5em; padding: 20px">
-        OSTATNIE REALIZACJE
-        </span></h3>
+<div id="realizacje">
+    <div class="container">
+      <div class="row" style="padding-bottom: 45px">
+        <br>
+        <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
+          <h3><span style="background-color: white; position: relative; top: -0.5em; padding: 20px">
+            OSTATNIE REALIZACJE
+            </span></h3>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!--if @pictures.where(created_at -> ?, 30.days).present?-->
-<div id="owl-slide" class="owl-carousel owl-theme">
-  <div class='item row' style="margin: 0">
-    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 1', class: 'img-responsive img1' %></div>
-    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 2', class: 'img-responsive img2' %></div>
-  </div>
-  <div class='item row' style="margin: 0">
-    <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 1', class: 'img-responsive img1' %></div>
-          <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 2', class: 'img-responsive img2' %></div>
-          <!--opinion2 = []-->
-          <!--@opinions.each do-->
-          <!--opinion1 = Opinion.sample-->
-          <!--next if opinion1 == opinion2-->
-          <!--opinion.image-->
+    <!--if @pictures.where(created_at -> ?, 30.days).present?-->
+    <div id="owl-slide" class="owl-carousel owl-theme">
+      <div class='item row' style="margin: 0">
+        <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 1', class: 'img-responsive img1' %></div>
+        <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 2', class: 'img-responsive img2' %></div>
+      </div>
+      <div class='item row' style="margin: 0">
+        <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 1', class: 'img-responsive img1' %></div>
+              <div class="col-md-6 col-xs-12" style="padding: 0;"><%= image_tag "https://s3.eu-central-1.amazonaws.com/dmarapp/layout/image1_scaled.jpg", alt: 'photo 2', class: 'img-responsive img2' %></div>
+              <!--opinion2 = []-->
+              <!--@opinions.each do-->
+              <!--opinion1 = Opinion.sample-->
+              <!--next if opinion1 == opinion2-->
+              <!--opinion.image-->
 
-          <!--@opinions.each do-->
-          <!--opinion2 = Opinion.sample-->
-          <!--next if opinion1 == opinion2-->
-          <!--opinion.image-->
-          <!--break-->
-          <!--end-->
-          <!--end-->
-  </div>
+              <!--@opinions.each do-->
+              <!--opinion2 = Opinion.sample-->
+              <!--next if opinion1 == opinion2-->
+              <!--opinion.image-->
+              <!--break-->
+              <!--end-->
+              <!--end-->
+      </div>
+    </div>
 </div>
 
 <div class="container">
@@ -89,83 +91,85 @@
     </div>
 </div>
 
-<div class="container" id="opinie">
-  <div class="row" style="padding-bottom: 45px">
-    <br>
-    <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
-      <h3><span style="background-color: white; position: relative; top: -0.5em; padding: 20px">
-    OPINIE O NAS
-    </span></h3>
+<div id="opinie">
+    <div class="container">
+      <div class="row" style="padding-bottom: 45px">
+        <br>
+        <div style="height: 3px; background-color: gray; text-align: center" class="custom-hr">
+          <h3><span style="background-color: white; position: relative; top: -0.5em; padding: 20px">
+        OPINIE O NAS
+        </span></h3>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<% if @opinions.present? %>
-    <div class="flexslider" style="margin: 0">
-        <ul class="slides" style="background-color: lightskyblue">
-          <% opinion2 = [] %>
-          <% @opinions.each do %>
-              <% opinion1 = @opinions.sample %>
-              <% next if opinion1 == opinion2 %>
-              <li>
-                <div class="row" style="padding-bottom: 30px; padding-top: 30px">
-                    <div class="col-md-6 col-md-push-5">
-                      <% if opinion1.user.avatar.present? %>
-                        <%= image_tag opinion1.user.avatar.url(:medium), class: 'img-circle', alt: opinion1.user.name + " Avatar" %>
-                      <% else %>
-                        <%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/anonymous.jpg', alt: opinion1.user.name + " Avatar", class: 'img-circle' %>
-                      <% end %>
-                    </div>
-                      <div class="col-md-4 col-md-pull-4" style="text-align: center; padding-top: 30px">
-                        <div class="hidden-md hidden-lg" style="padding-left: 90px; padding-right: 90px">
-                        <h3><%= opinion1.user.name %></h3>
-                          <blockquote class="blockquote-reverse">
-                        <h5> <i class="fa fa-quote-left"></i> &nbsp;<%= opinion1.content %>&nbsp;<i class="fa fa-quote-right"></i> </h5>
-                          </blockquote>
-                        </div>
-
-                        <div class="hidden-sm hidden-xs">
-                          <h3><%= opinion1.user.name %></h3>
-                          <blockquote class="blockquote-reverse">
-                            <h5> <i class="fa fa-quote-left"></i> &nbsp; <%= opinion1.content %> &nbsp;<i class="fa fa-quote-right"></i>  </h5>
-                          </blockquote>
-                        </div>
-                      </div>
-                </div>
-              </li>
+    <% if @opinions.present? %>
+        <div class="flexslider" style="margin: 0">
+            <ul class="slides" style="background-color: lightskyblue">
+              <% opinion2 = [] %>
               <% @opinions.each do %>
-                  <% opinion2 = @opinions.sample %>
+                  <% opinion1 = @opinions.sample %>
                   <% next if opinion1 == opinion2 %>
                   <li>
                     <div class="row" style="padding-bottom: 30px; padding-top: 30px">
-                      <div class="col-md-5 col-md-offset-1 col-xs-12">
-                        <% if opinion2.user.avatar.present? %>
-                            <%= image_tag opinion2.user.avatar.url(:medium), class: 'img-circle', alt: opinion2.user.name + " Avatar" %>
-                        <% else %>
-                            <%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/anonymous.jpg', alt: opinion2.user.name + " Avatar", class: 'img-circle' %>
-                        <% end %>
-                      </div>
-                      <div class="col-md-4 col-xs-12" style="text-align: center; padding-top: 30px">
-                      <div class="hidden-md hidden-lg" style="padding-left: 90px; padding-right: 90px;">
-                          <h3><%= opinion2.user.name%></h3>
-                        <blockquote style="text-align: left">
-                          <h5> <i class="fa fa-quote-left"></i> &nbsp;<%= opinion2.content %> &nbsp; <i class="fa fa-quote-right"></i> </h5>
-                        </blockquote>
-                      </div>
-                      <div class="hidden-sm hidden-xs">
-                        <h3><%= opinion2.user.name%></h3>
-                        <blockquote style="text-align: left">
-                          <h5> <i class="fa fa-quote-left"></i> &nbsp; <%= opinion2.content %>&nbsp; <i class="fa fa-quote-right"></i> </h5>
-                        </blockquote>
-                      </div>
+                        <div class="col-md-6 col-md-push-5" style="padding-top: 30px; padding-bottom: 30px">
+                          <% if opinion1.user.avatar.present? %>
+                            <%= image_tag opinion1.user.avatar.url(:medium), class: 'img-circle', alt: opinion1.user.name + " Avatar" %>
+                          <% else %>
+                            <%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/anonymous.jpg', alt: opinion1.user.name + " Avatar", class: 'img-circle' %>
+                          <% end %>
+                        </div>
+                          <div class="col-md-4 col-md-pull-4" >
+                            <div class="hidden-md hidden-lg" style="padding-left: 90px; padding-right: 90px; text-align: center">
+                            <h3><%= opinion1.user.name %></h3>
+                              <blockquote class="blockquote-reverse">
+                            <h5> <i class="fa fa-quote-left"></i> &nbsp;<%= opinion1.content %>&nbsp;<i class="fa fa-quote-right"></i> </h5>
+                              </blockquote>
+                            </div>
+
+                            <div class="hidden-sm hidden-xs" style="text-align: center; padding-top: 60px">
+                              <h3><%= opinion1.user.name %></h3>
+                              <blockquote class="blockquote-reverse">
+                                <h5> <i class="fa fa-quote-left"></i> &nbsp; <%= opinion1.content %> &nbsp;<i class="fa fa-quote-right"></i>  </h5>
+                              </blockquote>
+                            </div>
+                          </div>
                     </div>
                   </li>
-                  <% break %>
+                  <% @opinions.each do %>
+                      <% opinion2 = @opinions.sample %>
+                      <% next if opinion1 == opinion2 %>
+                      <li>
+                        <div class="row" style="padding-bottom: 30px; padding-top: 30px">
+                          <div class="col-md-5 col-md-offset-1 col-xs-12" style="padding-top: 30px; padding-bottom: 30px">
+                            <% if opinion2.user.avatar.present? %>
+                                <%= image_tag opinion2.user.avatar.url(:medium), class: 'img-circle', alt: opinion2.user.name + " Avatar" %>
+                            <% else %>
+                                <%= image_tag 'https://s3.eu-central-1.amazonaws.com/dmarapp/layout/anonymous.jpg', alt: opinion2.user.name + " Avatar", class: 'img-circle' %>
+                            <% end %>
+                          </div>
+                          <div class="col-md-4 col-xs-12" style="text-align: center">
+                          <div class="hidden-md hidden-lg" style="padding-left: 90px; padding-right: 90px">
+                              <h3><%= opinion2.user.name%></h3>
+                            <blockquote style="text-align: left">
+                              <h5> <i class="fa fa-quote-left"></i> &nbsp;<%= opinion2.content %> &nbsp; <i class="fa fa-quote-right"></i> </h5>
+                            </blockquote>
+                          </div>
+                          <div class="hidden-sm hidden-xs" style="text-align: center; padding-top: 60px">
+                            <h3><%= opinion2.user.name%></h3>
+                            <blockquote style="text-align: left">
+                              <h5> <i class="fa fa-quote-left"></i> &nbsp; <%= opinion2.content %>&nbsp; <i class="fa fa-quote-right"></i> </h5>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </li>
+                      <% break %>
+                  <% end %>
               <% end %>
-          <% end %>
-        </ul>
-    </div>
-<% end %>
+            </ul>
+        </div>
+    <% end %>
+</div>
 
 <div class="container-fluid" id="kontakt" style="background-image: url('https://s3.eu-central-1.amazonaws.com/dmarapp/layout/map_background.jpg'); min-height: 500px;">
     <div class="row" style="text-align: center; padding: 20px">

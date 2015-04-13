@@ -20,7 +20,6 @@
 #myNavbar > ul.nav.navbar-nav.navbar-right.hidden-lg.hidden-md.hidden-sm {
   li {
     a {
-      padding: 10px !important;
       text-decoration: none;
       font-size: 16px;
       color: black;
@@ -32,12 +31,7 @@
         background-color: yellowgreen !important;
       }
       &:focus {
-      }
-      .active {
-        &:focus {
-        }
-        &:hover {
-        }
+        background-color: #d6af29 !important;
       }
     }
   }
@@ -46,7 +40,8 @@
 #myNavbar > ul.nav.navbar-nav.navbar-right.hidden-xs {
   li {
     a {
-      padding: 25px !important;
+      padding-top: 25px !important;
+      padding-bottom: 25px !important;
       text-decoration: none;
       font-size: 16px;
       color: black;
@@ -58,23 +53,20 @@
         background-color: yellowgreen !important;
       }
       &:focus {
-      }
-      .active {
-        background-color: #d6cf29;
-        &:focus {
-        }
-        &:hover {
-        }
+        background-color: #d6af29 !important;
       }
     }
   }
+  li.dropdown.open > ul > li > a {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
 }
 
-.active {
+.active2 {
   background-color: #d6cf29;
   &:focus {
-  }
-  &:hover {
+    background-color: #d6af29 !important;
   }
 }
 
